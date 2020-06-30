@@ -1,0 +1,37 @@
+\documentclass{article}
+%\documentclass{standalone}
+
+\usepackage[left=.5cm,top=.5cm,right=.5cm,bottom=.5cm,bindingoffset=0.5cm]{geometry}
+
+\usepackage{subcaption}
+\usepackage{pgffor}
+\usepackage{adjustbox}
+\usepackage{graphics}
+
+\begin{document}
+	
+\begin{figure}
+	\foreach \x in {250,1000,1500}{% 
+		\begin{subfigure}[p]{0.3\textwidth}
+			\includegraphics[width=\linewidth]{MC_convergence/Convergence_Vov_\x sims.pdf}
+			\caption{}\label{subfig1:fig\x}
+		\end{subfigure}\quad 
+	}
+
+	\foreach \x in {250,1000,1500}{% 
+		\begin{subfigure}[p]{0.3\textwidth}
+			\includegraphics[width=\linewidth]{MC_convergence/Convergence_BCODov_\x sims.pdf}
+			\caption{}\label{subfig2:fig\x}
+		\end{subfigure}\quad
+	}
+
+	\foreach \x in {250,1000,1500}{% 
+		\begin{subfigure}[p]{0.3\textwidth}
+			\includegraphics[width=\linewidth]{MC_convergence/Convergence_BNH4ov_\x sims.pdf}
+			\caption{}\label{subfig3:fig\x}
+		\end{subfigure}\quad
+	}
+
+\end{figure}
+
+\end{document}
